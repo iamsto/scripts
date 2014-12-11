@@ -8,9 +8,10 @@ set sw_name "SW_NAME"
 set sw_pass "SW_PASS"
 set sw_ip "SW_IP"
 set sw_user "SW_USERNAME"
+set sw_port "SW_SSH_PORT
 set fname vrpcfg-sw0-[exec date +%Y-%m-%d].zip
 
-spawn ssh $sw_user@$sw_ip -p10022
+spawn ssh $sw_user@$sw_ip -p$sw_port
 
 expect "password:"
 send "$sw_pass\r"
